@@ -1,5 +1,5 @@
 {
-    "token": "YOUR_BOT_TOKEN_HERE",
+    "token": "此处填入bot token",
     "admin": [],
     "whitelist": [],
     "threads_static": 8,
