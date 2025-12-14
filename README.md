@@ -1,3 +1,5 @@
+[English](README_en.md)
+
 # Telegram Sticker Downloader (Enhanced)
 
 本项目基于 [littlebear0729/telegram_sticker_downloader](https://github.com/littlebear0729/telegram_sticker_downloader) 并**结合AI**进行了重写与优化。
