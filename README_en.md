@@ -35,25 +35,46 @@ This project is a rewrite and optimization based on [littlebear0729/telegram_sti
 
 ## 🚀 Deployment & Usage
 
-### 1. Configuration
-Edit `config.json` and fill in your information:
+### 1. Clone the Project
+First, clone the repository to your local server:
+```bash
+git clone https://github.com/raging-flames/telegram-sticker-downloader-enhanced.git
+cd telegram-sticker-downloader-enhanced
+```
+
+### 2. Configuration
+Open `config.json` with text editor:
+
+Fill in your Telegram Bot Token and Admin IDs:
 ```json
 {
-  "token": "YOUR_BOT_TOKEN",
-  "admin": [],       
+  "token": "YOUR_BOT_TOKEN_HERE",
+  "admin": [123456789],       
   "whitelist": [],            
   "collection_limit": 200     
 }
 ```
 
-### 2. Docker Start (Recommended)
+### 3. Run with Docker (Recommended)
+This is the easiest and recommended way, as it avoids manual dependency installation (like FFmpeg).
 ```bash
-# Build and start
+# Build and start in detached mode
 docker-compose up -d --build
+
+# View logs
+docker-compose logs -f
 ```
 
-### 3. Manual Run
-Requires `ffmpeg` (must support libvpx-vp9) and Python 3.11+.
+### 4. Manual Run (Alternative)
+If you prefer not to use Docker, ensure your system has Python 3.11+ and `ffmpeg` (must support libvpx-vp9) installed.
+
+**Install Dependencies (Ubuntu/Debian):**
+```bash
+sudo apt update
+sudo apt install ffmpeg python3-pip
+```
+
+**Run the Bot:**
 ```bash
 pip install -r requirements.txt
 python main.py
