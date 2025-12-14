@@ -34,13 +34,13 @@
 ## 🚀 部署与使用
 
 ### 1. 配置
-复制 `config.sample.json` 为 `config.json` 并填入您的信息：
+编辑 `config.json` 填入你的信息：
 ```json
 {
   "token": "YOUR_BOT_TOKEN",
-  "admin": [123456789],       // 管理员 ID (只有管理员可以使用)
-  "whitelist": [],            // 白名单 ID
-  "collection_limit": 200     // 收集模式最大数量
+  "admin": [],       
+  "whitelist": [],            
+  "collection_limit": 200     
 }
 ```
 
