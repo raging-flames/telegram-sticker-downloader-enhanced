@@ -1,8 +1,6 @@
 {
     "token": "YOUR_BOT_TOKEN_HERE",
-    "admin": [
-        123456789
-    ],
+    "admin": [],
     "whitelist": [],
     "threads_static": 8,
     "threads_dynamic": 3,
