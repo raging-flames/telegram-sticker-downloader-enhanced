@@ -35,25 +35,46 @@
 
 ## 🚀 部署与使用
 
-### 1. 配置
-编辑 `config.json` 填入你的信息：
+### 1. 下载项目
+首先将项目克隆到本地服务器：
+```bash
+git clone https://github.com/raging-flames/telegram-sticker-downloader-enhanced.git
+cd telegram-sticker-downloader-enhanced
+```
+
+### 2. 配置
+使用文本编辑器编辑 `config.json`：
+
+在文件中填入你的 Telegram Bot Token 和管理员 ID：
 ```json
 {
-  "token": "YOUR_BOT_TOKEN",
-  "admin": [],       
+  "token": "YOUR_BOT_TOKEN_HERE",
+  "admin": [123456789],       
   "whitelist": [],            
   "collection_limit": 200     
 }
 ```
 
-### 2. Docker 启动 (推荐)
+### 3. 使用 Docker 运行 (推荐)
+这是最简单且推荐的方式，无需手动安装 FFmpeg 等依赖，环境开箱即用。
 ```bash
-# 构建并启动
+# 构建并后台启动
 docker-compose up -d --build
+
+# 查看运行日志
+docker-compose logs -f
 ```
 
-### 3. 手动运行
-需要安装 `ffmpeg` (必须支持 libvpx-vp9) 和 Python 3.11+。
+### 4. 手动运行 (不推荐)
+如果您不想使用 Docker，请确保系统已安装 Python 3.11+ 和 `ffmpeg` (必须支持 libvpx-vp9)。
+
+**Ubuntu/Debian 安装依赖:**
+```bash
+sudo apt update
+sudo apt install ffmpeg python3-pip
+```
+
+**运行 Bot:**
 ```bash
 pip install -r requirements.txt
 python main.py
